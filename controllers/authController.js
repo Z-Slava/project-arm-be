@@ -9,6 +9,7 @@ class authController {
 			if (candidate) {
 				res.status(400).json({msg: 'This email is already used!'})
 			}
+			console.log('Smth');
 			// const user = 
 		} catch (error) {
 			console.log(error)
