@@ -61,17 +61,8 @@ class authController {
 
 	async getUsers(req, res) { 
 		try {
-			const testUser = new User({
-				email: "somebody@gmail.com",
-				password: "12345",
-				firstName: "Sanya",
-				lastName: "Stas",
-				phoneNumber: "+38061234545",
-				gender: "male",
-				birthDate: "02.02,1998"
-			})
-			await testUser.save()
-			res.json(`server works!`)
+			const usersList = await User.find();
+			res.json(usersList)
 		} catch (error) {
 			console.log(error)
 		}
