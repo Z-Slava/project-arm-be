@@ -21,7 +21,7 @@ class authController {
 			if (candidate) {
 				res.status(400).json({message: 'This email is already used!'})
 			}
-			var hashPassword = bcrypt.hashSync(password, 9);
+			let hashPassword = bcrypt.hashSync(password, 9);
 			const user = new User({ 
 				email: email, 
 				firstName: firstName,
